@@ -1,0 +1,56 @@
+﻿@model mvccrudoperations.Models.product_master
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>product_master</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.product_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.product_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.product_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.product_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.product_category)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.product_category)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

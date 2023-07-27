@@ -1,0 +1,50 @@
+﻿@model mvccrudoperations.Models.product_master
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>product_master</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.product_id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.product_id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.product_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.product_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.product_category)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.product_category)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
